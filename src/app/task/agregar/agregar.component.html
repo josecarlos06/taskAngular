@@ -1,0 +1,24 @@
+<form (ngSubmit)="agregar()" class="formulario">
+
+    <p *ngIf="!lista.title || !lista.descriptio; else correct" class="error">Llenar datos</p>
+    <ng-template #correct>
+        <p class="succes">Datos correctos</p>
+    </ng-template>
+    
+    <div class="campo">
+        <input type="text" 
+        placeholder="Nombre de tarea"
+        name="title"
+        [(ngModel)]="lista.title"
+        >
+    </div>
+    <div class="campo">
+        <textarea placeholder="Descripcion"
+        name=" descriptio"
+        [(ngModel)]="lista. descriptio"
+        ></textarea>
+    </div>
+    <div class="campo">
+        <button type="submit">Registrar</button>
+    </div>
+</form>

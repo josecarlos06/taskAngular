@@ -1,0 +1,9 @@
+<ul>
+    <h2 class="title">Pendientes</h2>
+    <li *ngFor="let lista of listados" class="tarea">
+        <h3 class="subtitle">{{lista.title}}</h3>
+        <p class="paragraph">
+            {{lista.descriptio}}
+        </p>
+    </li>
+</ul>
